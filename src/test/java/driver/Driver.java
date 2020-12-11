@@ -2,13 +2,14 @@ package driver;
 
 import com.codeborne.selenide.Browsers;
 import com.codeborne.selenide.Configuration;
+import config.AppConfig;
 import config.TestConfig;
 
 public class Driver {
     public static void initDriver() {
 
 
-        TestConfig.initConfig();
+        TestConfig.initConfig(AppConfig.CHROME);
 
 
         Configuration.pageLoadStrategy = "eager";
